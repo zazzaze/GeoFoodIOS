@@ -1,6 +1,6 @@
 //
 //  Location+CoreDataClass.swift
-//  
+//
 //
 //  Created by Егор on 26.04.2021.
 //

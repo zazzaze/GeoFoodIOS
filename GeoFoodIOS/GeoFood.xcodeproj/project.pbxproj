@@ -11,6 +11,8 @@
 		7456228126027776003B2D7B /* RestaurantViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7456228026027776003B2D7B /* RestaurantViewController.swift */; };
 		745F638B26011655003FB7E9 /* LoginEntryChecker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 745F638A26011655003FB7E9 /* LoginEntryChecker.swift */; };
 		745F639226011C50003FB7E9 /* LoginForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 745F639126011C50003FB7E9 /* LoginForm.swift */; };
+		747000042645514B001D928F /* Location+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 747000032645514B001D928F /* Location+CoreDataClass.swift */; };
+		747000082645518C001D928F /* Location+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 747000072645518C001D928F /* Location+CoreDataProperties.swift */; };
 		748B2415263F1BB000C80B4D /* RestaurantPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 748B2414263F1BB000C80B4D /* RestaurantPresenter.swift */; };
 		7490280E25FCFD8D00B382B4 /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7490280D25FCFD8D00B382B4 /* RegistrationViewController.swift */; };
 		7490282125FF5D1800B382B4 /* AuthorizationPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7490282025FF5D1800B382B4 /* AuthorizationPresenterTests.swift */; };
@@ -47,8 +49,6 @@
 		74C709F926359A46007A83B7 /* Sale+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74C709F326359A46007A83B7 /* Sale+CoreDataProperties.swift */; };
 		74C709FD26359E1C007A83B7 /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74C709FC26359E1C007A83B7 /* UserService.swift */; };
 		74C70A0126359ED2007A83B7 /* RequestFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74C70A0026359ED2007A83B7 /* RequestFactory.swift */; };
-		74C70A0C26371C8C007A83B7 /* Location+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74C70A0A26371C8C007A83B7 /* Location+CoreDataProperties.swift */; };
-		74C70A0D26371C8D007A83B7 /* Location+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74C70A0B26371C8C007A83B7 /* Location+CoreDataClass.swift */; };
 		74C70A13263759F4007A83B7 /* RestaurantTypeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74C70A12263759F4007A83B7 /* RestaurantTypeCell.swift */; };
 		74DC6E3D26022DE900FB7DC0 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74DC6E3C26022DE900FB7DC0 /* MapViewController.swift */; };
 		74DC6E4126022E5800FB7DC0 /* MapPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74DC6E4026022E5800FB7DC0 /* MapPresenter.swift */; };
@@ -95,6 +95,8 @@
 		7456228026027776003B2D7B /* RestaurantViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantViewController.swift; sourceTree = "<group>"; };
 		745F638A26011655003FB7E9 /* LoginEntryChecker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginEntryChecker.swift; sourceTree = "<group>"; };
 		745F639126011C50003FB7E9 /* LoginForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginForm.swift; sourceTree = "<group>"; };
+		747000032645514B001D928F /* Location+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Location+CoreDataClass.swift"; sourceTree = "<group>"; };
+		747000072645518C001D928F /* Location+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Location+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		748B2414263F1BB000C80B4D /* RestaurantPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantPresenter.swift; sourceTree = "<group>"; };
 		7490280D25FCFD8D00B382B4 /* RegistrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
 		7490281E25FF5D1800B382B4 /* GeoFoodTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GeoFoodTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -133,8 +135,6 @@
 		74C709F326359A46007A83B7 /* Sale+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Sale+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		74C709FC26359E1C007A83B7 /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
 		74C70A0026359ED2007A83B7 /* RequestFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestFactory.swift; sourceTree = "<group>"; };
-		74C70A0A26371C8C007A83B7 /* Location+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Location+CoreDataProperties.swift"; path = "/Users/egor/Desktop/Учеба/курсач 2 курс/GeoFood/GeoFoodIOS/GeoFood/BuisinessLogic/CoreData/DataModels/Location+CoreDataProperties.swift"; sourceTree = "<absolute>"; };
-		74C70A0B26371C8C007A83B7 /* Location+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Location+CoreDataClass.swift"; path = "/Users/egor/Desktop/Учеба/курсач 2 курс/GeoFood/GeoFoodIOS/GeoFood/BuisinessLogic/CoreData/DataModels/Location+CoreDataClass.swift"; sourceTree = "<absolute>"; };
 		74C70A12263759F4007A83B7 /* RestaurantTypeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantTypeCell.swift; sourceTree = "<group>"; };
 		74DC6E3C26022DE900FB7DC0 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		74DC6E4026022E5800FB7DC0 /* MapPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapPresenter.swift; sourceTree = "<group>"; };
@@ -394,14 +394,14 @@
 		74C709E3263594AA007A83B7 /* DataModels */ = {
 			isa = PBXGroup;
 			children = (
-				74C70A0B26371C8C007A83B7 /* Location+CoreDataClass.swift */,
-				74C70A0A26371C8C007A83B7 /* Location+CoreDataProperties.swift */,
 				74C709EF26359A45007A83B7 /* User+CoreDataClass.swift */,
 				74C709F026359A45007A83B7 /* User+CoreDataProperties.swift */,
 				74C709EE26359A45007A83B7 /* Restaurant+CoreDataClass.swift */,
 				74C709F126359A45007A83B7 /* Restaurant+CoreDataProperties.swift */,
 				74C709F226359A45007A83B7 /* Sale+CoreDataClass.swift */,
 				74C709F326359A46007A83B7 /* Sale+CoreDataProperties.swift */,
+				747000032645514B001D928F /* Location+CoreDataClass.swift */,
+				747000072645518C001D928F /* Location+CoreDataProperties.swift */,
 			);
 			path = DataModels;
 			sourceTree = "<group>";
@@ -761,20 +761,20 @@
 				74F330252642AC470047C0A9 /* UserModel.swift in Sources */,
 				749C49AE26336E210042E695 /* RestaurantViewModel.swift in Sources */,
 				74C709F926359A46007A83B7 /* Sale+CoreDataProperties.swift in Sources */,
-				74C70A0C26371C8C007A83B7 /* Location+CoreDataProperties.swift in Sources */,
 				74E6163E25FA999400A148F5 /* AuthorizationRouter.swift in Sources */,
 				7498FBFB261C5B5F00E962AF /* MainViewController.swift in Sources */,
-				74C70A0D26371C8D007A83B7 /* Location+CoreDataClass.swift in Sources */,
 				749C49A82633692D0042E695 /* RestaurantHeaderView.swift in Sources */,
 				745F638B26011655003FB7E9 /* LoginEntryChecker.swift in Sources */,
 				74E6163B25FA998B00A148F5 /* AuthorizationInteractor.swift in Sources */,
 				74F1660526308B8E00F34001 /* InputTextField.swift in Sources */,
+				747000082645518C001D928F /* Location+CoreDataProperties.swift in Sources */,
 				74EF9DC52639D62B0000B3BD /* SpecialSaleCollectionViewCell.swift in Sources */,
 				74F3301926421A680047C0A9 /* LocationManager.swift in Sources */,
 				749C49BA26342DB50042E695 /* SaleViewModel.swift in Sources */,
 				74F33009264185270047C0A9 /* AccountViewController.swift in Sources */,
 				74C709FD26359E1C007A83B7 /* UserService.swift in Sources */,
 				74A7BA4D260D1E920041A18A /* RestaurantSaleModel.swift in Sources */,
+				747000042645514B001D928F /* Location+CoreDataClass.swift in Sources */,
 				74B2571D263D94C200C32C89 /* MapRestaurantViewModel.swift in Sources */,
 				74C709F426359A46007A83B7 /* Restaurant+CoreDataClass.swift in Sources */,
 				74C70A13263759F4007A83B7 /* RestaurantTypeCell.swift in Sources */,
