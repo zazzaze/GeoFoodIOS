@@ -30,9 +30,9 @@
         <relationship name="untrackedLocations" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Location" inverseName="user" inverseEntity="Location"/>
     </entity>
     <elements>
-        <element name="Location" positionX="-162" positionY="162" width="128" height="89"/>
-        <element name="Restaurant" positionX="-399.021240234375" positionY="173.7115783691406" width="128" height="134"/>
+        <element name="Location" positionX="-250.6742553710938" positionY="96.72564697265625" width="128" height="103"/>
+        <element name="Restaurant" positionX="-399.021240234375" positionY="173.7115783691406" width="128" height="148"/>
         <element name="Sale" positionX="290.3701171875" positionY="16.53732299804688" width="128" height="118"/>
-        <element name="User" positionX="-63" positionY="-18" width="128" height="104"/>
+        <element name="User" positionX="-63" positionY="-18" width="128" height="118"/>
     </elements>
 </model>

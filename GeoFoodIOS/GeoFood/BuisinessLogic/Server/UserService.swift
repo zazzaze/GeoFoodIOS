@@ -156,6 +156,9 @@ class UserService {
                 self.coreDataStore.saveData()
                 return
             }
+            DispatchQueue.global(qos: .background).async {
+                self.syncUserData()
+            }
         }
         
         dataTask.resume()
