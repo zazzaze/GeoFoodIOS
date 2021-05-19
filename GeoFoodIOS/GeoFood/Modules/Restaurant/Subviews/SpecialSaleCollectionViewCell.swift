@@ -83,7 +83,7 @@ class SpecialSaleCollectionViewCell: UICollectionViewCell {
         
         getButton.translatesAutoresizingMaskIntoConstraints = false
         getButton.setTitle("Получить", for: .normal)
-        getButton.titleLabel?.font = UIFont.systemFont(ofSize: 16, weight: .semibold)
+        getButton.titleLabel?.font = UIFont.systemFont(ofSize: 13, weight: .semibold)
         getButton.addTarget(self, action: #selector(didTapButton), for: .touchUpInside)
         frontView.addSubview(getButton)
         

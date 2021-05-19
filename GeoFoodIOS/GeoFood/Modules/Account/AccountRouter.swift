@@ -25,6 +25,6 @@ class AccountRouter: AccountRouterInput {
     
     /// Вернуться в корневой вью
     func popBack() {
-        view.navigationController?.popViewController(animated: true)
+        view.navigationController?.popToRootViewController(animated: true)
     }
 }

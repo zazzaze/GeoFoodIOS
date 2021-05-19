@@ -48,7 +48,7 @@ class AuthorizationPresenter: AuthorizationPresenterProtocol {
     ///   - withEmail: Введенная почта
     ///   - password: Введенный пароль
     func authorizationButtonTapped(withEmail: String, password: String) {
-        if /*LoginEntryChecker.checkEmail(withEmail) && LoginEntryChecker.checkPassword(password)*/ true {
+        if LoginEntryChecker.checkEmail(withEmail) && LoginEntryChecker.checkPassword(password) {
             view.startAnimatingActivityIndicator()
             interactor.authUser(withEmail: withEmail, password: password)
         } else {

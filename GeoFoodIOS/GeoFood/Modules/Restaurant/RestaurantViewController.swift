@@ -50,6 +50,8 @@ class RestaurantViewController: UIViewController {
     /// Верхний констреинт таблицы общих акций
     private var salesTableTopAnchor: NSLayoutYAxisAnchor?
     
+    private let loader = UIActivityIndicatorView()
+    
     /// Перерисовать вью
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
@@ -99,6 +101,7 @@ class RestaurantViewController: UIViewController {
         specialSalesCollection.showsHorizontalScrollIndicator = false
         specialSalesCollection.isPagingEnabled = true
         specialSalesCollection.layer.masksToBounds = false
+        specialSalesCollection.delegate = self
         let layout = specialSalesCollection.collectionViewLayout as! UICollectionViewFlowLayout
         layout.itemSize = CGSize(width: self.view.frame.width - 60, height: 160)
         layout.sectionInset = UIEdgeInsets(top: 0, left: 30, bottom: 0, right: 30)
@@ -114,6 +117,11 @@ class RestaurantViewController: UIViewController {
         
         contentView.translatesAutoresizingMaskIntoConstraints = false
         contentView.layer.masksToBounds = true
+        
+        loader.translatesAutoresizingMaskIntoConstraints = false
+        loader.style = .large
+        loader.tintColor = .lightGray
+        loader.startAnimating()
     }
     
     /// Добавить все вью в контроллер
@@ -124,6 +132,7 @@ class RestaurantViewController: UIViewController {
         contentView.addSubview(specialSalesCollection)
         contentView.addSubview(salesTable)
         contentView.addSubview(pageControl)
+        view.addSubview(loader)
     }
     
     /// Активировать констреинты
@@ -160,7 +169,10 @@ class RestaurantViewController: UIViewController {
             salesTable.widthAnchor.constraint(equalTo: contentView.widthAnchor, constant: -40),
             salesTable.heightAnchor.constraint(equalTo: scrollView.heightAnchor),
             
-            contentView.bottomAnchor.constraint(equalTo: salesTable.bottomAnchor)
+            contentView.bottomAnchor.constraint(equalTo: salesTable.bottomAnchor),
+            
+            loader.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            loader.centerYAnchor.constraint(equalTo: view.centerYAnchor),
         ])
         scrollView.contentSize = contentView.bounds.size
     }
@@ -171,6 +183,8 @@ extension RestaurantViewController: RestaurantPresenterOutput {
     /// - Parameter vm: Модель данных кафе
     func configure(with vm: RestaurantViewModel) {
         self.viewModel = vm
+        loader.stopAnimating()
+        loader.isHidden = true
         header.configure(with: vm)
         specialSalesCollection.isHidden = vm.specialSales.count == 0
         pageControl.isHidden = vm.specialSales.count == 0
@@ -281,7 +295,7 @@ extension RestaurantViewController: UICollectionViewDataSource {
 }
 
 
-extension RestaurantViewController: UIScrollViewDelegate {
+extension RestaurantViewController: UIScrollViewDelegate, UICollectionViewDelegate {
     
     /// Индекс отображаемой ячейки коллекции
     func getCurrentPage() {
@@ -317,6 +331,7 @@ extension RestaurantViewController: UIScrollViewDelegate {
             }
             lastSalesTableScrollY = scrollView.contentOffset.y
         }
+        getCurrentPage()
     }
     
     /// Скролл завершил пролистывание
@@ -344,17 +359,13 @@ extension RestaurantViewController: UIScrollViewDelegate {
             }
             lastSalesTableScrollY = scrollView.contentOffset.y
         }
-        if scrollView == specialSalesCollection {
-            getCurrentPage()
-        }
+        getCurrentPage()
     }
     
     /// Скролл скролится пользователем
     /// - Parameter scrollView: Скролл
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        if scrollView == specialSalesCollection {
-            getCurrentPage()
-        }
+        getCurrentPage()
     }
     
     /// Скролл закончил касание пользователя
@@ -363,8 +374,6 @@ extension RestaurantViewController: UIScrollViewDelegate {
     ///   - velocity: Разница при скроле
     ///   - targetContentOffset: Текущая точка
     func scrollViewWillEndDragging(_ scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) {
-        if scrollView == specialSalesCollection {
-            getCurrentPage()
-        }
+        getCurrentPage()
     }
 }

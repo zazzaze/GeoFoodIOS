@@ -47,7 +47,7 @@ class RegistrationPresenter: RegistrationPresenterInput {
     ///   - password: Введенный пароль
     ///   - passwordRepeat: Введенный повторно пароль
     func registrationButtonTapped(withEmail: String, password: String, passwordRepeat: String) {
-        if /*LoginEntryChecker.checkPassword(password) && password == passwordRepeat*/ true {
+        if LoginEntryChecker.checkPassword(password) && password == passwordRepeat {
             interactor.registerUser(withEmail: withEmail, password: password)
         } else {
             view.showAlert(title: "Ошибка", message: "Проверьте введенные данные")
